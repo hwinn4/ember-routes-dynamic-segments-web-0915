@@ -24,6 +24,7 @@ describe('Acceptance: SeeOneArtist', function() {
     server.create('artist', {first_name: "Steven", last_name: "Nunez"});
     visit('/');
     click('.all-artists');
+
     // click the first artist
     click('.artist a:first');
 
@@ -37,7 +38,6 @@ describe('Acceptance: SeeOneArtist', function() {
     visit('/');
     click('.all-artists');
     click('.artist a:first');
-
     andThen(function() {
       expect($(".genre").text()).to.eq("Pop");
     });

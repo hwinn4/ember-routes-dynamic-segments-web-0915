@@ -1,0 +1,9 @@
+{{#each model as |artist|}}
+  
+    {{#link-to 'artists.artist' artist class="artist"}}
+      {{artist.fullName}}
+    {{/link-to}}
+ 
+{{/each}}
+
+{{outlet}}

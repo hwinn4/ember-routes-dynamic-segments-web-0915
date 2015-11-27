@@ -40,7 +40,8 @@ describe('Acceptance: SeeAllArtists', function() {
     click('.all-artists');
 
     andThen(function(){
-      let $artist = $('.artist a').first();
+      let $artist = $('.artist').first();
+      // debugger;
       expect($artist.attr('href')).to.eq(`/artists/${artist.id}`);
       expect($artist.text()).to.eq('Steven Nunez');
     });
